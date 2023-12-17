@@ -1,0 +1,21 @@
+Vấn đề kinh doanh
+Cả Ngân hàng và Người nộp đơn xin vay đều nhận thấy quá trình tìm hiểu hoặc cho ai đó biết cơ hội được chấp thuận đơn xin vay của họ rất khó khăn và tốn thời gian. Cả hai bên phải sắp xếp thời gian để sắp xếp một cuộc gặp rồi phân tích đơn đăng ký của mình để tìm ra kết quả.
+
+Trong dự án này, chúng ta sẽ xem cách sử dụng kiến thức và kỹ năng về khoa học dữ liệu và máy học để giải quyết vấn đề này.
+
+Giải pháp dựa trên Machine Learning
+Bước đầu tiên: Chúng tôi nhận dữ liệu về những người đăng ký khoản vay được phê duyệt và bị từ chối từ ngân hàng.
+Bước thứ hai: Chúng tôi phân tích dữ liệu bằng cách kiểm tra chất lượng dữ liệu: giá trị bị thiếu, giá trị ngoại lệ, định dạng dữ liệu, v.v. Sau đó, chúng tôi trực quan hóa tập dữ liệu để rút ra thông tin chi tiết từ dữ liệu.
+Bước thứ ba: Sau khi kiểm tra chất lượng dữ liệu và trực quan hóa tập dữ liệu, chúng tôi thực hiện kỹ thuật tính năng: điền các giá trị còn thiếu và mã hóa dữ liệu văn bản thành dữ liệu số.
+Bước thứ tư: Sau đó, chúng tôi tạo ba tập hợp con từ tập dữ liệu gốc có tên:
+X_train: Dùng để huấn luyện các Mô hình Machine Learning
+X_test: Được sử dụng để kiểm tra hiệu suất của các mô hình được đào tạo
+X_Val: Tập dữ liệu này được sử dụng trong thử nghiệm xác thực chéo
+Tôi cũng đã tạo một phiên bản thu nhỏ của ba bộ trên dùng để huấn luyện Mô hình hồi quy logistic.
+
+Bước thứ năm: Huấn luyện 3 mô hình phân loại: Hồi quy logistic, mô hình phân loại rừng ngẫu nhiên và mô hình phân loại XGBoost với các tham số tốt nhất. Các thông số tốt nhất của họ được tìm thấy bằng RandomizedSearchCV. Đã kiểm tra hiệu suất của mô hình được đào tạo bằng bộ X_test.
+
+Bước thứ sáu: Xác thực chéo các mô hình được đào tạo trên bộ X_Val và chọn mô hình Phân loại rừng ngẫu nhiên làm mô hình tốt nhất và lưu nó ở định dạng dưa chua bằng joblib.
+
+Bước thứ bảy: Tạo một ứng dụng giao diện người dùng bằng HTML và CSS, đồng thời tích hợp tệp dưa chua với ứng dụng bằng khung bình.
+
