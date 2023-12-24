@@ -57,7 +57,7 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <h1>DỰ ĐÓAN HOÀN TRẢ KHOẢN VAY -DACN</h1>
+            <h1>DỰ ĐÓAN HOÀN TRẢ KHOẢN VAY - DACN</h1>
           </div> <!-- end of col -->
         </div> <!-- end of row -->
       </div> <!-- end of container -->
@@ -73,11 +73,11 @@
             <div class="col-lg-6">
                 <div class="text-container">
 
-    <h2>Prediction Result</h2>
+    <h2>Kết quả</h2>
     {% if prediction == 1 %}
-      <p>Chúc mừng! Khoản vay của bạn sẽ được chấp nhận.</p>
+      <p><h3 style="color: green;">Chúc mừng!</h3> Khoản vay của bạn sẽ được chấp nhận.</p>
     {% else %}
-      <p>Rất tiếc, khoản vay của bạn sẽ không được chấp thuận.</p>
+      <p><h3 style="color: red;">Rất tiếc!</h3> Khoản vay của bạn sẽ không được chấp thuận.</p>
     {% endif %}
     <p>Điểm CIBIL (hoặc điểm tín dụng) của bạn: {{ score }}</p>
     {% if 750<=score<=900 %}
