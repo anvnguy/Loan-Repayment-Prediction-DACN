@@ -76,10 +76,12 @@
     <h2>Kết quả</h2>
     {% if prediction == 1 %}
       <p><h3 style="color: green;">Chúc mừng!</h3> Khoản vay của bạn sẽ được chấp nhận.</p>
+      <p style= "font-style: italic;">Thông tin tham khảo thêm về CIBIL</p>
     {% else %}
       <p><h3 style="color: red;">Rất tiếc!</h3> Khoản vay của bạn sẽ không được chấp thuận.</p>
+      <p style= "font-style: italic;">Thông tin tham khảo thêm về CIBIL</p>
     {% endif %}
-    <p>Điểm CIBIL (hoặc điểm tín dụng) của bạn: {{ score }}</p>
+    <p>Điểm CIBIL (điểm tín dụng) của bạn: {{ score }}</p>
     {% if 750<=score<=900 %}
       <p>Điểm CIBIL xuất sắc. Khả năng được duyệt vay rất cao.</p>
     {% elif 700<=score<=749 %}
