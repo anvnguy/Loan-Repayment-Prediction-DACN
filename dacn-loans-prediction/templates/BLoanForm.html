@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <title>Dự Đoán Hoàn Trả Khoản Vay</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="text-center mt-5">
+        <h1>Dự Đoán Hoàn Trả Khoản Vay</h1>
+        <br />
+
+        <p>Please Fill up the form</p>
+      </div>
+
+      <div class="row">
+        <div class="mx-auto">
+          <div class="card mt-2 mx-auto p-4 bg-light">
+            <div class="card-body bg-light">
+              <div class="container">
+                <form
+                  id="contact-form"
+                  role="form"
+                  action="./bform"
+                  method="POST"
+                >
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_name">Firstname *</label>
+                          <input
+                            id="form_name"
+                            type="text"
+                            name="name"
+                            class="form-control"
+                            placeholder="Please enter your firstname *"
+                            required="required"
+                            data-error="Firstname is required."
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="form_lastname">Lastname *</label>
+                          <input
+                            id="form_lastname"
+                            type="text"
+                            name="surname"
+                            class="form-control"
+                            placeholder="Please enter your lastname *"
+                            required="required"
+                            data-error="Lastname is required."
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <h6>Please provide the following ratings for analysis:</h6>
+                    <div class="row">
+                      <div class="col-md-6">Location Of Shop:</div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="location"
+                            id="location"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="location"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="location"
+                            id="location"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="location"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="location"
+                            id="location"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="location"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="location"
+                            id="location"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="location"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="location"
+                            id="location"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="location"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="location"
+                            id="location"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="location"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">Number of customers:</div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="no_customers"
+                            id="no_customers"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="no_customers"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="no_customers"
+                            id="no_customers"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="no_customers"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="no_customers"
+                            id="no_customers"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="no_customers"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="no_customers"
+                            id="no_customers"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="no_customers"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="no_customers"
+                            id="no_customers"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="no_customers"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="no_customers"
+                            id="no_customers"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="no_customers"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">Daily Sales:</div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="daily_sales"
+                            id="daily_sales"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="daily_sales"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="daily_sales"
+                            id="daily_sales"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="daily_sales"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="daily_sales"
+                            id="daily_sales"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="daily_sales"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="daily_sales"
+                            id="daily_sales"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="daily_sales"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="daily_sales"
+                            id="daily_sales"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="daily_sales"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="daily_sales"
+                            id="daily_sales"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="daily_sales"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">Rent and Wages of Employees:</div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rent_wages"
+                            id="rent_wages"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="rent_wages"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rent_wages"
+                            id="rent_wages"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="rent_wages"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rent_wages"
+                            id="rent_wages"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="rent_wages"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rent_wages"
+                            id="rent_wages"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="rent_wages"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rent_wages"
+                            id="rent_wages"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="rent_wages"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rent_wages"
+                            id="rent_wages"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="rent_wages"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">Competition in area:</div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="competition"
+                            id="competition"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="competition"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="competition"
+                            id="competition"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="competition"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="competition"
+                            id="competition"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="competition"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="competition"
+                            id="competition"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="competition"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="competition"
+                            id="competition"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="competition"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="competition"
+                            id="competition"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="competition"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        Frequency of supplier payments:
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="freq_supply_pay"
+                            id="freq_supply_pay"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="freq_supply_pay"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="freq_supply_pay"
+                            id="freq_supply_pay"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="freq_supply_pay"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="freq_supply_pay"
+                            id="freq_supply_pay"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="freq_supply_pay"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="freq_supply_pay"
+                            id="freq_supply_pay"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="freq_supply_pay"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="freq_supply_pay"
+                            id="freq_supply_pay"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="freq_supply_pay"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="freq_supply_pay"
+                            id="freq_supply_pay"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="freq_supply_pay"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        Supply chain, stock availability and warehouse space:
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="supply"
+                            id="supply"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="supply">0</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="supply"
+                            id="supply"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="supply">1</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="supply"
+                            id="supply"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="supply">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="supply"
+                            id="supply"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="supply">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="supply"
+                            id="supply"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="supply">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="supply"
+                            id="supply"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="supply">5</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        Input shop ratings in review portals out of 5:
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rating_reviewportal"
+                            id="rating_reviewportal"
+                            value="0"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="rating_reviewportal"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rating_reviewportal"
+                            id="rating_reviewportal"
+                            value="1"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="rating_reviewportal"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rating_reviewportal"
+                            id="rating_reviewportal"
+                            value="2"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="rating_reviewportal"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rating_reviewportal"
+                            id="rating_reviewportal"
+                            value="3"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="rating_reviewportal"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rating_reviewportal"
+                            id="rating_reviewportal"
+                            value="4"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="rating_reviewportal"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="rating_reviewportal"
+                            id="rating_reviewportal"
+                            value="5"
+                          />
+                          <label
+                            class="form-check-label"
+                            for="rating_reviewportal"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">Nature of Shop Retailer:</div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="nature"
+                            id="nature"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="nature">0</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="nature"
+                            id="nature"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="nature">1</label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="nature"
+                            id="nature"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="nature">2</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="nature"
+                            id="nature"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="nature">3</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="nature"
+                            id="nature"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="nature">4</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="nature"
+                            id="nature"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="nature">5</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">Size of shop:</div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="size_shop"
+                            id="size_shop"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="size_shop"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="size_shop"
+                            id="size_shop"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="size_shop"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="size_shop"
+                            id="size_shop"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="size_shop"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="size_shop"
+                            id="size_shop"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="size_shop"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="size_shop"
+                            id="size_shop"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="size_shop"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="size_shop"
+                            id="size_shop"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="size_shop"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        Rate according to total assets:
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="total_assets"
+                            id="total_assets"
+                            value="0"
+                          />
+                          <label class="form-check-label" for="total_assets"
+                            >0</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="total_assets"
+                            id="total_assets"
+                            value="1"
+                          />
+                          <label class="form-check-label" for="total_assets"
+                            >1</label
+                          >
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="total_assets"
+                            id="total_assets"
+                            value="2"
+                          />
+                          <label class="form-check-label" for="total_assets"
+                            >2</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="total_assets"
+                            id="total_assets"
+                            value="3"
+                          />
+                          <label class="form-check-label" for="total_assets"
+                            >3</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="total_assets"
+                            id="total_assets"
+                            value="4"
+                          />
+                          <label class="form-check-label" for="total_assets"
+                            >4</label
+                          >
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input
+                            class="form-check-input"
+                            type="radio"
+                            name="total_assets"
+                            id="total_assets"
+                            value="5"
+                          />
+                          <label class="form-check-label" for="total_assets"
+                            >5</label
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+                    <br />
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="education">Education *</label>
+                          <select
+                            id="education"
+                            name="education"
+                            class="form-control"
+                            required="required"
+                            data-error="Please specify your Education."
+                          >
+                            <option value="" selected disabled>
+                              --Select Your Education--
+                            </option>
+                            <option value="1">Graduate</option>
+                            <option value="0">Not Graduate</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="credit"
+                            >Is credit given to customers? *</label
+                          >
+                          <select
+                            id="credit"
+                            name="credit"
+                            class="form-control"
+                            required="required"
+                            data-error="Please specify."
+                          >
+                            <option value="" selected disabled>
+                              --Select--
+                            </option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="Business_type"
+                            >Types of Business (Yes for Large Scale and No for
+                            small scale) *</label
+                          >
+                          <select
+                            id="Business_type"
+                            name="Business_type"
+                            class="form-control"
+                            required="required"
+                            data-error="Please specify Business_type."
+                          >
+                            <option value="" selected disabled>
+                              --Select--
+                            </option>
+                            <option value="1">Yes</option>
+                            <option value="0">No</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="cases">Total Legal Cases *</label>
+                          <select
+                            id="cases"
+                            name="cases"
+                            class="form-control"
+                            required="required"
+                            data-error="Please specify your Credit history."
+                          >
+                            <option value="" selected disabled>
+                              --Select Total no. of Legal cases--
+                            </option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="total_workers">Total Workers *</label>
+                          <select
+                            id="total_workers"
+                            name="total_workers"
+                            class="form-control"
+                            required="required"
+                            data-error="Please specify total_workers"
+                          >
+                            <option value="" selected disabled>
+                              --Select Your Total Workers--
+                            </option>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7+</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="income">Applicant Income *</label>
+                          <input
+                            id="income"
+                            type="text"
+                            name="income"
+                            class="form-control"
+                            placeholder="Please enter your Income *"
+                            required="required"
+                            data-error="Income is required."
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="fincome">Family Income *</label>
+                          <input
+                            id="fincome"
+                            type="text"
+                            name="fincome"
+                            class="form-control"
+                            placeholder="Please enter Family Income *"
+                            required="required"
+                            data-error="Family Income is required."
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="loan_amt">Loan Amount *</label>
+                          <input
+                            id="loan_amt"
+                            type="text"
+                            name="loan_amt"
+                            class="form-control"
+                            placeholder="Please enter Loan Amount *"
+                            required="required"
+                            data-error="Loan Amount is required."
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <label for="loan_term">Loan Term *</label>
+                          <input
+                            id="loan_term"
+                            type="text"
+                            name="loan_term"
+                            class="form-control"
+                            placeholder="Please enter Loan Term *"
+                            required="required"
+                            data-error="Loan Term is required."
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12">
+                        <input
+                          type="submit"
+                          class="btn btn-success btn-send pt-2 btn-block"
+                          value="Predict"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <div>
+                  <h2><b>{{prediction_text}}</b></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- /.8 -->
+        </div>
+        <!-- /.row-->
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
